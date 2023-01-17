@@ -20,6 +20,7 @@ class WeatherAPI
         $this->defaultCity = $defaultCity;
     }
 
+    /* Get wether from api with a given city */
     public function getWeather(string $city = null): array|false
     {
         if($city === null){
@@ -69,7 +70,8 @@ class WeatherAPI
             ];
         }
     }
-
+    
+    /* display data informations */
     public function transform(array $data): void{
 
         $wind = $data["wind"];
